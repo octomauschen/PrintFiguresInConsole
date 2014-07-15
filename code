@@ -1,0 +1,103 @@
+PrintFiguresInConsole 1.0 15.07 //Выводит в консоль h.
+=====================
+package rect;
+
+class Main{
+public static void main(String[] args) {
+
+    Figure[] list = {
+    		new RecangularFigure(6, 9),
+    		new CircleFigure(5, 9),
+    		new TriangleFigure(8, 9)	
+    };			
+	
+    StringBuilder sb;
+    {
+	for (Figure f : list) {
+		sb = new StringBuilder() 
+			.append(f.printRes());
+
+		
+		System.out.println(sb.toString());
+	}
+}
+
+}
+}
+
+
+package rect;
+
+public abstract class Figure {
+	public int h;
+	public int w;
+	public String res;
+	
+	public Figure(int h, int w){
+		this.h = h;
+		this.w = w;
+	}
+	public int setH(){
+		return h;
+	}
+
+	public int setW(){
+		return w;
+	}
+	
+	public int getH(){
+		return h;
+	}
+	
+	public int getW(){
+		return w;
+	}
+	
+	public abstract String printRes();
+	
+}
+
+
+package rect;
+
+	public class TriangleFigure extends Figure{
+		public TriangleFigure(int w, int h){
+			super(w, h);
+		}
+
+		@Override
+		public String printRes(){
+			return "";	
+		}
+		}
+	
+
+package rect;
+
+public class RecangularFigure extends Figure{
+	public RecangularFigure(int w, int h){
+		super(w, h);
+	}
+	@Override
+	public String printRes(){
+		return "h";	
+	}
+}
+
+
+package rect;
+
+public class СircleFigure extends Figure{
+		public СircleFigure(int w, int h){
+			super(w, h);
+		}
+
+		@Override
+		public String printRes(){
+			return "";	
+		}
+			
+		
+	
+}
+
